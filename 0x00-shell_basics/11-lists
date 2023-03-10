@@ -1,2 +1,2 @@
 #!/bin/bash
-find 'pwd' 'dirname' \'pwd\'' /boot -type f -exec ls -l {} \
+ls -la /; ls -la ../ /boot
