@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Displays information about processes, including their PIDs, status, and resource usage
+ps auxf
