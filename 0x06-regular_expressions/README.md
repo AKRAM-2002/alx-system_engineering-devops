@@ -30,9 +30,6 @@ Welcome to the 0x06. Regular Expression project! This project involves working w
 
 - Output format: [SENDER],[RECEIVER],[FLAGS]
 - Ruby script: [100-textme.rb]
-## Deadline and Review
-
-Ongoing second chance project started on Nov 28, 2023, and must end by Dec 2, 2023, 4:00 AM. An auto review will be launched at the deadline.
 
 
 ## Conclusion
