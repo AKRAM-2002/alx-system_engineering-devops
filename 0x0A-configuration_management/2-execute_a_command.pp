@@ -1,4 +1,4 @@
-# kill_process.pp
+# Kills a process name killmenow
 
 exec { 'pkill killmenow':
   path     => '/usr/bin',
