@@ -1,0 +1,2 @@
+# 0x0D-web_stack_debugging_0
+This particular project is part of a series focused on debugging webstacks. In these projects, I am presented with webstacks that are broken or have bugs. The ultimate objective is to develop a Bash script that, when run, will restore the webstack to a fully functional state
