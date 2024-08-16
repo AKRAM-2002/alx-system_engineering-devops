@@ -8,13 +8,26 @@ def top_ten(subreddit):
     """ 
         returns the top ten posts for a given subreddit
     """
+
+    u_agent = 'Mozilla/5.0'
+
+    headers = {
+        'User-Agent': u_agent
+    }
+
     
-    headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'}
-    url = 'https://www.reddit.com/r/{}/hot/.json?limit=10'.format(subreddit)
-    response = requests.get(url, headers=headers, allow_redirects=False)
-    if response.status_code == 200:
-        for post in response.json().get('data').get('children'):
-            print(post.get('data').get('title'))        
-        
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
+    res = requests.get(url,
+                       headers=headers,
+                       params=params,
+                       allow_redirects=False)
+    if res.status_code != 200:
+        print(None)
+        return
+    dic = res.json()
+    hot_posts = dic['data']['children']
+    if len(hot_posts) is 0:
+        print(None)
     else:
-        return 0
+        for post in hot_posts:
+            print(post['data']['title'])
